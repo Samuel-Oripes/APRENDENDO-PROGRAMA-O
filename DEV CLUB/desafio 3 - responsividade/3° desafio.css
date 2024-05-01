@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#div-header{
+    margin: 44px 0 0 76px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29.26px;
+    color: #989D9C;
+}
+
+a{
+    margin-right: 23px;
+    cursor: pointer;
+}
+
+a:active{
+    opacity: .8;
+}
+
+#button-header{
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(102, 90, 225);
+    color: #FFFFFF;
+    line-height: 29.26px;
+    font-size: 24px;
+    font-weight: 600;
+    width: 130px;
+    height: 41px;
+}
+
+#button-header:active{
+    opacity: .8;
+}
+
+main{
+    margin: 90px 0 183px 110px;
+}
+
+img{
+    display: inline-block;
+    width: 568px;
+    height: 500px;
+}
+
+#div-main{
+    display: inline-block;
+    max-width: 515px;
+    margin-left: 86px;
+}
+
+h1{
+    color: #515151;
+    line-height: 121.9px;
+    font-size: 100px;
+    font-weight: 900;
+}
+
+h2{
+    color: #515151;
+    line-height: 70.7px;
+    font-size: 58px;
+    font-weight: 500;
+}
+
+p{
+    line-height: 29.26px;
+    color: #848484;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 32px 0 65px 0;
+}
+
+#button-main{
+    border-radius: 30px;
+    height: 64px;
+    width: 239px;
+    background-color: #ADFF00;
+    color: #000000;
+    line-height: 34.13px;
+    font-size: 28px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+#button-main:active{
+    opacity: .6;
+}
+
+@media screen and (max-width: 1200px){
+
+main{
+    margin: 80px 0 80px 40px;
+}
+
+#div-main{
+    margin-left: 30px;
+}
+
+}
+
+@media screen and (max-width: 1175px){
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+#div-header{
+    margin: 44px 0 0 0;
+}
+            
+img{
+    display: block;
+    margin: 80px auto 80px auto;
+}
+            
+#div-main{
+ display: block;
+ margin:  80px auto 80px auto;
+ text-align: center;
+}
+
+}
+
+@media screen and (max-width: 850px){
+
+header{
+    display: none;
+}
+
+#div-texto{
+    display: none;
+}
+
+h2{
+  margin: 7px 0 32px;  
+}
+}
+
+@media screen and (max-width: 680px){
+
+body{
+    height: 100vh;
+    width: 100vh;
+}
+}
