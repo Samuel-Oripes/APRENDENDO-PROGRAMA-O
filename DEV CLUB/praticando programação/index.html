@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiro-projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Formulário de pesquisa DevClub</h1>
+        <p>Obrigado por dedicar seu tempo para ajudar a melhorar a plataforma</p>
+    </div>
+    <div>
+        <label>
+            Nome
+            <br>
+            <input 
+            placeholder="Digite seu nome"
+            autocomplete="additional-name"
+            required
+            />
+        </label>
+        <br>
+        <label>
+            Email
+            <br>
+            <input 
+            placeholder="Digite seu Email"
+            autocomplete="email"
+            type="email"
+            required
+            />
+        </label>
+        <br>
+        <label>
+            Idade <span>(opcional)</span>
+            <br>
+            <input 
+            placeholder="Idade"
+            type="number"
+            min="10"
+            max="99"
+            />
+        </label>
+        <br>
+        <label>
+            Qual opção melhor descreve sua função atual?
+            <br>
+            <select required>
+                <option disabled selected>Selecione sua função atual</option>
+                <option>Estudante</option>
+                <option>Estudante em tempo integral</option>
+                <option>Trabalho em meio período</option>
+                <option>Trabalho em tempo integral</option>
+                <option>Prefiro não dizer</option>
+            </select>
+            <br>
+            <label>
+                Você recomendaria o DevClub para um amigo?
+                <br>
+                <input type="radio" name="recomendação"/> Definitivamente
+                <br>
+                <input type="radio" name="recomendação"/> Talvez
+                <br>
+                <input type="radio" name="recomendação"/> Não
+            </label>
+            <br>
+            <label>
+                Qual é o seu recurso favorito do DevClub?
+                <br>
+                <select required>
+                    <option disabled selected>Selecione uma opção</option>
+                    <option>Projetos</option>
+                    <option>Comunidade</option>
+                    <option>Partner</option>
+                    <option>Mentorias</option>
+                </select>
+            </label>
+            <br>
+            <label>
+                O que você vê que deve ser melhorado? <span>(Marque todas as que se aplicam)</span>
+                <br>
+                <input type="checkbox"/> Projetos/Eventos
+                <br>
+                <input type="checkbox"/> Desafios
+                <br>
+                <input type="checkbox"/> Comunidade
+                <br>
+                <input type="checkbox"/> Didática das aulas
+                <br>
+                <input type="checkbox"/> Conteúdos das aulas
+                <br>
+                <input type="checkbox"/> Mentorias
+            </label>
+            <br>
+            <label>
+                Algum comentário ou sugestão?
+                <br>
+                <textarea>Digite seu comentário aqui...</textarea>
+            </label>
+            <br>
+            <button type="submit">Enviar</button>
+    </div>
+</body>
+</html>
