@@ -15,34 +15,41 @@
             Converter <b>de</b>
             <select class="moeda-selecionada-1">
                 <option value="real">R$ Real Brasileiro</option>
+                <option value="dolar">$ Dolar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="libra">£ Libra Esterlina</option>
+                <option value="bitcoin">Bitcoin</option>
             </select>
         </label>
         <label>
             Converter <b>para</b>
             <select class="moeda-selecionada-2">
-                <option value="dolar">US$ Dolar Americano</option>
+                <option value="real">R$ Real Brasileiro</option>
+                <option value="dolar">$ Dolar Americano</option>
                 <option value="euro">€ Euro</option>
+                <option value="libra">£ Libra Esterlina</option>
+                <option value="bitcoin">Bitcoin</option>
             </select>
         </label>
         <label>
             <b>Valor</b>
-            <input class="input-moeda" placeholder="Digite o valor">
+            <input class="input-moeda" placeholder="Digite o valor" type="text">
         </label>
         <button class="botao-conversor">Converter</button>
 
         <section>
             <div class="div-moeda">
                 <img class="imagem-moeda1" src="./assets/real.png" alt="logo-moeda-a-converter">
-                <p class="moeda" id="moeda1-nome">Real</p>
+                <p class="moeda" id="moeda1-nome">Real Brasileiro</p>
                 <p class="valor" id="valor-a-converter">R$ 0,00</p>
             </div>
 
             <img class="seta" src="./assets/seta.png" alt="seta">
             
             <div  class="div-moeda">
-                <img class="imagem-moeda2" src="./assets/dolar.png" alt="logo-moeda-convertida">
-                <p class="moeda" id="moeda2-nome">Dolar</p>
-                <p class="valor" id="valor-convertido">US$ 0,00</p>
+                <img class="imagem-moeda2" src="./assets/real.png" alt="logo-moeda-convertida">
+                <p class="moeda" id="moeda2-nome">Real Brasileiro</p>
+                <p class="valor" id="valor-convertido">R$ 0,00</p>
             </div>
         </section>
     </main>
