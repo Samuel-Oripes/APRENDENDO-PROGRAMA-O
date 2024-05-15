@@ -5,9 +5,15 @@ function sorteioDosNumeros(){
     const minimo = Math.ceil(document.querySelector("#valor-mínimo").value)
     const maximo = Math.floor(document.querySelector("#valor-máximo").value)
 
-    const resultado = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+    if(minimo >= maximo){
+        alert("O valor mínimo tem que ser MENOR que o valor máximo")
+    }
 
-    alert(resultado)
+    else{
+        const resultado = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+
+        alert(resultado)
+    }
 }
 
 botao.addEventListener("click", sorteioDosNumeros)
