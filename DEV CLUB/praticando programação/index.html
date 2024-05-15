@@ -8,100 +8,109 @@
 </head>
 
 <body>
-    <div>
-        <h1>Formulário de pesquisa DevClub</h1>
-        <p>Obrigado por dedicar seu tempo para ajudar a melhorar a plataforma</p>
-    </div>
-    <div>
-        <label>
-            Nome
-            <br>
-            <input 
-            placeholder="Digite seu nome"
-            autocomplete="additional-name"
-            required
-            />
-        </label>
-        <br>
-        <label>
-            Email
-            <br>
-            <input 
-            placeholder="Digite seu Email"
-            autocomplete="email"
-            type="email"
-            required
-            />
-        </label>
-        <br>
-        <label>
-            Idade <span>(opcional)</span>
-            <br>
-            <input 
-            placeholder="Idade"
-            type="number"
-            min="10"
-            max="99"
-            />
-        </label>
-        <br>
-        <label>
-            Qual opção melhor descreve sua função atual?
-            <br>
-            <select required>
-                <option disabled selected>Selecione sua função atual</option>
-                <option>Estudante</option>
-                <option>Estudante em tempo integral</option>
-                <option>Trabalho em meio período</option>
-                <option>Trabalho em tempo integral</option>
-                <option>Prefiro não dizer</option>
-            </select>
-            <br>
+    <main>
+        <div class="titulo">
+            <h1>Formulário de pesquisa DevClub</h1>
+            <p>Obrigado por dedicar seu tempo para ajudar a melhorar a plataforma</p>
+        </div>
+        <div class="formulario">
             <label>
-                Você recomendaria o DevClub para um amigo?
+                Nome
                 <br>
-                <input type="radio" name="recomendação"/> Definitivamente
-                <br>
-                <input type="radio" name="recomendação"/> Talvez
-                <br>
-                <input type="radio" name="recomendação"/> Não
+                <input 
+                class="identificação"
+                placeholder="Digite seu nome"
+                autocomplete="additional-name"
+                required
+                />
             </label>
             <br>
             <label>
-                Qual é o seu recurso favorito do DevClub?
+                Email
+                <br>
+                <input 
+                class="identificação"
+                placeholder="Digite seu Email"
+                autocomplete="email"
+                type="email"
+                required
+                />
+            </label>
+            <br>
+            <label>
+                Idade <span>(opcional)</span>
+                <br>
+                <input 
+                class="identificação"
+                placeholder="Idade"
+                type="number"
+                min="10"
+                max="99"
+                />
+            </label>
+            <br>
+            <label>
+                Qual opção melhor descreve sua função atual?
                 <br>
                 <select required>
-                    <option disabled selected>Selecione uma opção</option>
-                    <option>Projetos</option>
-                    <option>Comunidade</option>
-                    <option>Partner</option>
-                    <option>Mentorias</option>
+                    <option disabled selected>Selecione sua função atual</option>
+                    <option>Estudante</option>
+                    <option>Estudante em tempo integral</option>
+                    <option>Trabalho em meio período</option>
+                    <option>Trabalho em tempo integral</option>
+                    <option>Prefiro não dizer</option>
                 </select>
-            </label>
-            <br>
-            <label>
-                O que você vê que deve ser melhorado? <span>(Marque todas as que se aplicam)</span>
                 <br>
-                <input type="checkbox"/> Projetos/Eventos
+                <label class="label-recomendação">
+                    Você recomendaria o DevClub para um amigo?
+                    <br>
+                    <div>
+                        <input class="input-radio" type="radio" name="recomendação" id="input-radio1"/> Definitivamente
+                        <br>
+                        <input class="input-radio" type="radio" name="recomendação"/> Talvez
+                        <br>
+                        <input  class="input-radio" type="radio" name="recomendação"/> Não
+                    </div>
+                </label>
                 <br>
-                <input type="checkbox"/> Desafios
+                <label>
+                    Qual é o seu recurso favorito do DevClub?
+                    <br>
+                    <select required>
+                        <option disabled selected>Selecione uma opção</option>
+                        <option>Projetos</option>
+                        <option>Comunidade</option>
+                        <option>Partner</option>
+                        <option>Mentorias</option>
+                    </select>
+                </label>
                 <br>
-                <input type="checkbox"/> Comunidade
+                <label>
+                    O que você vê que deve ser melhorado? <span>(Marque todas as que se aplicam)</span>
+                    <br>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="checkbox1"/> Projetos/Eventos
+                        <br>
+                        <input type="checkbox" class="checkbox"/> Desafios
+                        <br>
+                        <input type="checkbox" class="checkbox"/> Comunidade
+                        <br>
+                        <input type="checkbox" class="checkbox"/> Didática das aulas
+                        <br>
+                        <input type="checkbox" class="checkbox"/> Conteúdos das aulas
+                        <br>
+                        <input type="checkbox" class="checkbox"/> Mentorias
+                    </div>
+                </label>
                 <br>
-                <input type="checkbox"/> Didática das aulas
+                <label>
+                    Algum comentário ou sugestão?
+                    <br>
+                    <textarea placeholder="Digite seu comentário aqui..."></textarea>
+                </label>
                 <br>
-                <input type="checkbox"/> Conteúdos das aulas
-                <br>
-                <input type="checkbox"/> Mentorias
-            </label>
-            <br>
-            <label>
-                Algum comentário ou sugestão?
-                <br>
-                <textarea>Digite seu comentário aqui...</textarea>
-            </label>
-            <br>
-            <button type="submit">Enviar</button>
-    </div>
+                <button type="submit">Enviar</button>
+        </div>
+    </main>
 </body>
 </html>
