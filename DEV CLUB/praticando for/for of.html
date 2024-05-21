@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aplicando o for</title>
+</head>
+
+<body>
+    <input placeholder="Digite o nome do contato" type="text">
+    <p></p>
+    <button>Procurar Contato</button>
+</body>
+
+<SCript>
+
+let p = document.querySelector("p")
+let input = document.querySelector("input")
+const button = document.querySelector("button")
+
+const contatos = [
+    { nome: "Paloma", numero: "(38) 999002040" },
+    { nome: "Pirata", numero: "(38) 999002041" },
+    { nome: "Cacau", numero: "(38) 999002042" },
+    { nome: "Louro", numero: "(38) 999002043" },
+    { nome: "Leôncio", numero: "(38) 999002044" },
+]
+
+function pesquisarContato(){
+
+    for(const contato of contatos){
+    
+    if(input.value.toLowerCase() === contato.nome.toLowerCase()){
+        p.innerHTML = `Contato encontrado, nome: ${contato.nome}, Tel: ${contato.numero}`
+    
+        break
+    } else {
+        p.innerHTML = "Contato não encontrado, procure por outro nome"
+    }
+}
+}
+
+button.addEventListener("click", pesquisarContato)
+
+</SCript>
+</html>
