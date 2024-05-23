@@ -1,62 +1,39 @@
-const resultado = document.querySelector(".resultado")
-const pontosComputador = document.querySelector("#pontos-computador")
-const seusPontos = document.querySelector("#seus-pontos")
+const resultado = document.querySelector('.resultado')
+const seusPontos = document.querySelector('#seus-pontos')
+const pontosComputador = document.querySelector('#pontos-computador')
 
-let seusPontosAcumulados = 0
-let pontosComputadorAcumulados = 0
+let somaSeusPontos = 0
+let somaPontosComputador = 0
 
-const pedra = 1
-const papel = 2
-const tesoura = 3
+const jogadaHumano = (escolhaHumano) => {
 
-function sorteio1(){
-    const jogadaComputador = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-
-    if(pedra == jogadaComputador){
-        resultado.innerHTML = "O Computador jogou PEDRA, deu EMPATE!"
-    } else if(pedra + 2 == jogadaComputador){
-        resultado.innerHTML = "O Computador jogou PAPEL, você PERDEU!"
-        pontosComputadorAcumulados += 1
-        pontosComputador.innerHTML = pontosComputadorAcumulados
-    } else {
-        resultado.innerHTML = "O Computador jogou TESOURA, você GANHOU!"
-        seusPontosAcumulados += 1
-        seusPontos.innerHTML = seusPontosAcumulados
-    }
-    console.log(jogadaComputador)
+    jokenpô(escolhaHumano, escolhaComputador())
 }
 
-function sorteio2(){
-    const jogadaComputador = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+const escolhaComputador = () => {
+    const opção = ['pedra', 'papel', 'tesoura']
+    const sorteio = Math.floor(Math.random() * 3)
 
-    if(papel == jogadaComputador){
-        resultado.innerHTML = "O Computador jogou PAPEL, deu EMPATE!"
-    } else if(papel < jogadaComputador){
-        resultado.innerHTML = "O Computador jogou TESOURA, você PERDEU!"
-        pontosComputadorAcumulados += 1
-        pontosComputador.innerHTML = pontosComputadorAcumulados
-    } else {
-        resultado.innerHTML = "O Computador jogou PEDRA, você GANHOU!"
-        seusPontosAcumulados += 1
-        seusPontos.innerHTML = seusPontosAcumulados
-    }
-    console.log(jogadaComputador)
+    return opção[sorteio]
 }
 
-function sorteio3(){
-    const jogadaComputador = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+const jokenpô = (humano, maquina) => {
 
-    if(tesoura == jogadaComputador){
-        resultado.innerHTML = "O Computador jogou TESOURA, deu EMPATE!"
-    } else if(tesoura - 2 == jogadaComputador){
-        resultado.innerHTML = "O Computador jogou PEDRA, você PERDEU!"
-        pontosComputadorAcumulados += 1
-        pontosComputador.innerHTML = pontosComputadorAcumulados
+    console.log('humano: ' + humano + '; ' + 'maquina: ' + maquina)
+
+    if (humano == maquina) {
+        resultado.innerHTML = 'Deu Empate!'
+    } else if (
+        humano == 'pedra' && maquina == 'tesoura' ||
+        humano == 'papel' && maquina == 'pedra' ||
+        humano == 'tesoura' && maquina == 'papel'
+    ) {
+        resultado.innerHTML = 'Você Ganhou!'
+        somaSeusPontos++
+        seusPontos.innerHTML = somaSeusPontos
     } else {
-        resultado.innerHTML = "O Computador jogou PAPEL, você GANHOU!"
-        seusPontosAcumulados += 1
-        seusPontos.innerHTML = seusPontosAcumulados
+        resultado.innerHTML = 'Você Perdeu!'
+        somaPontosComputador++
+        pontosComputador.innerHTML = somaPontosComputador
     }
-    console.log(jogadaComputador)
 }
-
