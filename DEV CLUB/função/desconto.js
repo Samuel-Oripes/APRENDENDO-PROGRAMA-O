@@ -16,4 +16,4 @@ function calcularDesconto(preço, desconto) {
     return resultado
 }
 
-console.log(`O valor final da compra foi de: R$ ${preçoTotal}`)
+console.log(`O valor da compra foi de: R$ ${preçoTotal.toFixed(2)}`)
