@@ -16,7 +16,7 @@ const valorAtualizado = companies.map(empresas => {
         foundedOn: empresas.foundedOn }
 })
 
-const empresasAntigas = companies.filter(empresas => empresas.foundedOn < 1990 ? true : false)
+const empresasAntigas = valorAtualizado.filter(empresas => empresas.foundedOn < 1990 ? true : false)
 
 const valorTotal = empresasAntigas.reduce((acc, valor) => { return acc + valor.marketValue},0)
 
