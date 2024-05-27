@@ -16,5 +16,24 @@ const valorEmpresasAntigas = companies.map(empresas => {
 .filter(empresas => empresas.foundedOn < 1990 ? true : false)
 .reduce((acc, valor) => acc + valor.marketValue,0)
 
-
 console.log(valorEmpresasAntigas)
+
+
+
+// MAP, REDUCE E FILTER COM AS FUNÇÕES SEPARADAS/FORA DO CÓDIGO
+
+const valorEmpresasNovas = (empresas => {
+    empresas.marketValue -= (empresas.marketValue / 10)
+    return empresas
+})
+
+const empresasNovas = (empresas =>  empresas.foundedOn > 1990 ? true : false)
+
+const soma = ((acc, valor) => acc + valor.marketValue)
+
+const valorTotal = companies.map(valorEmpresasNovas)
+.filter(empresasNovas)
+.reduce(soma,0)
+
+console.log(valorTotal)
+
