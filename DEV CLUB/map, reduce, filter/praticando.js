@@ -7,17 +7,12 @@ const companies = [
     {name: 'Apple', marketValue: 845, CEO: 'Tim Cook', foundedOn: 1976 },
 ]
 
-const valorAtualizado = companies.map(empresas => {
-    
-    return {
-        name: empresas.name,
-        marketValue: empresas.marketValue + (empresas.marketValue * 0.1),
-        CEO: empresas.CEO,
-        foundedOn: empresas.foundedOn }
-})
+const valorEmpresasAntigas = companies.map(empresas => {
 
-const empresasAntigas = valorAtualizado.filter(empresas => empresas.foundedOn < 1990 ? true : false)
+    empresas.marketValue += (empresas.marketValue / 10)
+    return empresas
 
-const valorTotal = empresasAntigas.reduce((acc, valor) => { return acc + valor.marketValue},0)
+}).filter(empresas => empresas.foundedOn < 1990 ? true : false).reduce((acc, valor) => { return acc + valor.marketValue},0)
 
-console.log(valorTotal)
+
+console.log(valorEmpresasAntigas)
