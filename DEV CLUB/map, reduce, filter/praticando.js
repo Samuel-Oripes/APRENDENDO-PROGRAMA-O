@@ -12,7 +12,9 @@ const valorEmpresasAntigas = companies.map(empresas => {
     empresas.marketValue += (empresas.marketValue / 10)
     return empresas
 
-}).filter(empresas => empresas.foundedOn < 1990 ? true : false).reduce((acc, valor) => acc + valor.marketValue,0)
+})
+.filter(empresas => empresas.foundedOn < 1990 ? true : false)
+.reduce((acc, valor) => acc + valor.marketValue,0)
 
 
 console.log(valorEmpresasAntigas)
