@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="mascara-formulario"></div>
+    <div class="mascara-formulario" onclick="fecharFormulario()"></div>
     <div class="cabeçalho">
         <img src="./img/logo-header.png" alt="imagem mario">
         <a href="">Home</a>
@@ -24,7 +24,7 @@
             <p> Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos
                 entupidos ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia!
                 Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
-            <button>ENTRE EM CONTATO</button>
+            <button onclick="abrirFormulario()">ENTRE EM CONTATO</button>
         </div>
 
         <div>
@@ -42,12 +42,17 @@
         <img src="./img/whatsapp.png" alt="link para whatsapp">
     </a>
 
-    <form class="formulario-fale-conosco">
-        <input placeholder="Seu nome">
-        <input placeholder="Seu telefone">
-        <textarea placeholder="Digite seu problema aqui..."></textarea>
-        <button class="botao-formulario">Pedir orçamento</button>
+    <form 
+        class="formulario-fale-conosco"
+        action="https://formcarry.com/s/pA1HmWxJXGy"
+        method="POST"
+        enctype="multipart/form-data">
+            <input placeholder="Seu nome" type="text" name="nome">
+            <input placeholder="Seu telefone" type="tel" name="telefone">
+            <textarea placeholder="Digite seu problema aqui..." name="dúvidas"></textarea>
+            <button class="botao-formulario" type="submit">Pedir orçamento</button>
     </form>
 </body>
+<script src="./scripts.js"></script>
 
 </html>
