@@ -1,10 +1,55 @@
-const menuOptions = [
+const ul = document.querySelector(".lista")
+let minhaLi = ''
 
-    { name: 'X-Salada', price: 30, vegan: false, src: './img/xsalada.jpeg' },
-    { name: 'X-Bacon', price: 34, vegan: false, src: './img/xbacon.png' },
-    { name: 'X-Bacon Egg', price: 39, vegan: false, src: './img/bacon-egg.png' },
-    { name: 'Monstruoso', price: 50, vegan: false, src: './img/monstruoso.png' },
-    { name: 'Big Vegano', price: 55, vegan: true, src: './img/xvegan.png' },
-    { name: 'X-Vegan', price: 45, vegan: true, src: './img/monstruoso-vegan.png' },
+function formatarEmMoeda(value) {
+    const formatar = value.toLocaleString('pt-br', {
+        style: 'currency', 
+        currency: 'BRL' })
     
-]
+    return formatar
+}
+
+function mostrarTudo(productsArray) {
+    minhaLi = ""
+
+    productsArray.forEach(product => {
+        minhaLi += `
+            <li>
+                <img src=${product.src} alt="imagem X-Bacon Egg">
+                <p>${product.name}</p>
+                <p class="item-price">${formatarEmMoeda(product.price)}</p>
+            </li>
+        `
+        ul.innerHTML = minhaLi
+    })
+}
+
+function mapear() {
+
+    const desconto = menuOptions.map(product => ({
+        ...product,
+        price: product.price * 0.9,
+    }))
+
+    mostrarTudo(desconto)
+}
+
+function somarTudo() {
+
+    const valorDeTudo = menuOptions.reduce((acc, valor) => acc + valor.price, 0)
+
+    ul.innerHTML = `
+    <li>
+        <p>O valor total dos itens é ${formatarEmMoeda(valorDeTudo)}</p>
+    </li>
+    `
+}
+
+function filtrar() {
+
+    const produtosVeganos = menuOptions.filter(products => products.vegan)
+
+    mostrarTudo(produtosVeganos)
+}
+
+
