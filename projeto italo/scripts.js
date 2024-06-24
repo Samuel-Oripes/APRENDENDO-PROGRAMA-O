@@ -5,43 +5,43 @@ const lembrete = document.querySelector(".div-lembrete")
 const cronograma = document.querySelector(".calendario")
 
 function chamarCronograma(){
-    cronograma.style.left = "50%"
-    perfil.style.left = "-80%"
-    menu.style.right = "-50%"
-    lembrete.style.left = "-50%"
+    cronograma.style.visibility = "visible"
+    perfil.style.visibility = "hidden"
+    menu.style.visibility = "hidden"
+    lembrete.style.visibility = "hidden"
     mascaraForm.style.visibility = "visible"
 }
 
 function chamarLembrete(){
-    lembrete.style.left = "50%"
+    lembrete.style.visibility = "visible"
     mascaraForm.style.visibility = "visible"
-    perfil.style.left = "-80%"
-    menu.style.right = "-50%"
-    cronograma.style.left = "-50%"
+    perfil.style.visibility = "hidden"
+    menu.style.visibility = "hidden"
+    cronograma.style.visibility = "hidden"
 }
 
 function chamarMenu(){
-    menu.style.right = "0"
+    menu.style.visibility = "visible"
     mascaraForm.style.visibility = "visible"
-    perfil.style.left = "-80%"
-    lembrete.style.left = "-50%"
-    cronograma.style.left = "-50%"
+    perfil.style.visibility = "hidden"
+    lembrete.style.visibility = "hidden"
+    cronograma.style.visibility = "hidden"
 }
 
 function chamarPerfil(){
-    perfil.style.left = "0"
+    perfil.style.visibility = "visible"
     mascaraForm.style.visibility = "visible"
-    menu.style.right = "-50%"
-    lembrete.style.left = "-50%"
-    cronograma.style.left = "-50%"
+    menu.style.visibility = "hidden"
+    lembrete.style.visibility = "hidden"
+    cronograma.style.visibility = "hidden"
 }
 
 function fecharAba(){
     mascaraForm.style.visibility = "hidden"
-    perfil.style.left = "-80%"
-    menu.style.right = "-50%"
-    lembrete.style.left = "-50%"
-    cronograma.style.left = "-50%"
+    perfil.style.visibility = "hidden"
+    menu.style.visibility = "hidden"
+    lembrete.style.visibility = "hidden"
+    cronograma.style.visibility = "hidden"
 }
 
 let calendario = document.querySelector(".numero-dias")
