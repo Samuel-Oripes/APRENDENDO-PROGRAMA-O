@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    opacity: 0.4;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.imagem-perfil{
+    width: 50px;
+    margin-bottom: 10px;
+    border: #ffffff solid 2px;
+}
+
+.div-perfil{
+    display: flex;
+    flex-direction: column;
+    background-color: #d0eae1;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    padding: 20px 10px 0;
+    left: 200px;
+}
+
+.nome-perfil{
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sair, .alterar-senha{
+    text-decoration: none;
+    color: #006400;
+    font-weight: 500;
+}
+
+.alterar-imagem{
+    text-decoration: none;
+    color: #006400;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.email-perfil{
+    margin: 20px 0 0;
+}
+
+.div-lembrete{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #d0eae1;
+    display: flex;
+    position: fixed;
+    left: -50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    border-radius: 5px;
+    border: #4c4c4c 2px solid;
+    margin-top: 5px;
+}
+
+/*left: 50%*/
+
+.lembrete{
+    text-decoration: none;
+    color: #006400;
+    font-weight: 500;
+}
+
+.trabalhos{
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.data{
+    font-weight: bold;
+}
+
+span{
+    font-size: 20px;
+}
+
+.div-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #d0eae1;
+    align-items: center;
+    position: fixed;
+    padding: 20px 30px;
+    right: 0;
+    gap: 20px;
+    right: -50%;
+}
+
+.opcoes-menu{
+    text-decoration: none;
+    color: #006400;
+    font-weight: 500;
+}
+
+.div-cabecalho{
+    display: flex;  
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    background-color:  #4c4c4c;
+    padding: 10px 0;
+}
+
+.botao{
+    background-color: #DFB050;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.botao-imagem{
+   border-radius: 100%;
+   border: none;
+   height: 49.21px;
+}
+
+.imagem-perfil-botao{
+    width: 50px;
+    border-radius: 100%;
+}
+
+.imagem-menu-botao{
+    width: 40px;
+}
+
+.botao-menu{
+    border: none;
+    background-color:  #4c4c4c;
+    height: 40px;
+}
+
+.mascara-formulario{
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.calendario{
+    margin: 10px;
+    width: 90%;;
+    padding: 10px;
+    background-color: #DFB050;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    left: -50%;
+    transform: translateX(-53%);
+}
+
+.numero-dias{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.dias-semana{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.dias-semana span{
+    color: black;
+    display: inline-block;
+    width: 14.2%;
+}
+
+.numero-dias span{
+    color: #555;
+    display: inline-block;
+    width: 14.2%;
+    margin-bottom: 8px;
+}
+
+.mes-anterior {
+    opacity: 0.5;
+}
