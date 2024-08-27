@@ -1,17 +1,18 @@
-import express, { request } from "express"
-import { PrismaClient } from '@prisma/client'
+import express from "express" //forma de importar o express (gerencia requisições)
 
+//importar prisma (facilita interagir com bancos de dados)
+import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
-const app = express()
-app.use(express.json())
+const app = express() //colocando o express em uma variável para tornar mais prático seu uso
+app.use(express.json()) //serve para mostrar ao express que estamos usando json
 
 
 //listar o que está no servidor
 
 app.get('/usuarios', async (req, res) => {
 
-    const users = await prisma.user.findMany()
+    const users = await prisma.user.findMany() //procurar todos
 
     res.status(200).json(users)
 })
@@ -20,6 +21,9 @@ app.get('/usuarios', async (req, res) => {
 // adicionar algo ao servidor
 
 app.post('/usuarios', async (req, res) => {
+
+    // async e await: é uma forma de fazer o js esperar a resposta do banco de dados
+    //estrutura com base na documentação do prisma
 
     const user = await prisma.user.create({
         data: {
@@ -39,11 +43,15 @@ app.post('/usuarios', async (req, res) => {
 
 app.put('/usuarios/:id', async (req, res) => {
 
-    req.params.id
+    //estrutura com base na documentação do prisma
+
     const user = await prisma.user.update({
+
+        //where: quem você quer atualizar
         where: {
             id: req.params.id
         },
+        //informações do usuário
         data: {
             email: req.body.email,
             age: req.body.age,
@@ -56,9 +64,15 @@ app.put('/usuarios/:id', async (req, res) => {
     res.status(200).json(user)
 })
 
+//deletar algo do servidor
+
 app.delete('/usuarios/:id', async (req, res) => {
 
+    //estrutura com base na documentação do prisma
+
     const user = await prisma.user.delete({
+        
+        //where: quem você quer deletar
         where: {
             id: req.params.id
         }
