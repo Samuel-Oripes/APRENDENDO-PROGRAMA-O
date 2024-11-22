@@ -1,4 +1,5 @@
 import express from "express" //forma de importar o express (gerencia requisições)
+import cors from 'cors'
 
 //importar prisma (facilita interagir com bancos de dados)
 import { PrismaClient } from '@prisma/client'
@@ -6,7 +7,7 @@ const prisma = new PrismaClient()
 
 const app = express() //colocando o express em uma variável para tornar mais prático seu uso
 app.use(express.json()) //serve para mostrar ao express que estamos usando json
-
+app.use(cors())
 
 //listar o que está no servidor
 
